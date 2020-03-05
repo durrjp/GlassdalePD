@@ -1,14 +1,17 @@
 import Criminal from "./Criminal.js";
 import { useCriminals } from "./CriminalDataProvider.js";
-console.log(useCriminals())
+
+const contentElement = document.querySelector(".criminalsContainer")
+
 const CriminalList = () => {
-
-    const contentElement = document.querySelector(".criminalsContainer")
-
     const criminals = useCriminals()
-    for (const criminalObject of criminals) {
+    // for (const criminalObject of criminals) {
+    //     contentElement.innerHTML += Criminal(criminalObject)
+    // }
+    criminals["0"].forEach(criminalObject => {
         contentElement.innerHTML += Criminal(criminalObject)
-    }
+        
+    });
 }
 
 

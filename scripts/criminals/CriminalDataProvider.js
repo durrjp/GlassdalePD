@@ -10,7 +10,6 @@ export const getCriminals = () => {
         .then(response => response.json())
         .then(parsedCriminals => {
                 criminals.push(parsedCriminals)
-                console.log(criminals)
             }
         )
 }
