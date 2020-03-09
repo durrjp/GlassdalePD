@@ -8,9 +8,8 @@ const CriminalList = () => {
     // for (const criminalObject of criminals) {
     //     contentElement.innerHTML += Criminal(criminalObject)
     // }
-    criminals["0"].forEach(criminalObject => {
+    criminals.forEach(criminalObject => {
         contentElement.innerHTML += Criminal(criminalObject)
-        
     });
 }
 
