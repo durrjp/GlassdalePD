@@ -9,42 +9,15 @@ import { useConvictions } from "./ConvictionDataProvider.js"
 const eventHub = document.querySelector(".container")
 const contentTarget = document.querySelector(".filters__crime")
 
-// let ConvictionSelect = () => {
-//     // Get all convictions from application state
-//     const convictions = useConvictions()
-
-//     const render = convictionsCollection => {
-//         /*
-//             Use interpolation here to invoke the map() method on
-//             the convictionsCollection to generate the option elements.
-//             Look back at the example provided above.
-//         */
-//         contentTarget.innerHTML =
-//         `
-//             <select class="dropdown" id="crimeSelect">
-//                 <option value="0">Please select a crime...</option>
-//                 ${
-//                     convictionsCollection.map(crimeObj => {
-//                         return `<option value="${crimeObj.id}">${crimeObj.name}</option>`
-//                     })
-//                 }
-//             </select>
-//         `
-//     }
-
-//     render(convictions)
-// }
-
-// export default ConvictionSelect
-
-
 // On the content target, listen for a "change" event.
 contentTarget.addEventListener("change", event => {
 
     // Only do this if the `crimeSelect` element was changed
-    if (event.target.id === "crimeSelect" ) {
-        console.log("stuffs")
+    if (event.target.id === "crimeSelect") {
+
         const selectedCrime = event.target.value
+        console.log(selectedCrime)
+
         // Create custom event. Provide an appropriate name.
         const crimeSelectEvent = new CustomEvent("crimeSelected", {
             detail: {
@@ -56,7 +29,6 @@ contentTarget.addEventListener("change", event => {
         eventHub.dispatchEvent(crimeSelectEvent)
     }
 })
-
 
 const render = convictionsCollection => {
     contentTarget.innerHTML = `

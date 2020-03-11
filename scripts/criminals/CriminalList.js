@@ -1,6 +1,7 @@
 import Criminal from "./Criminal.js";
 import { useCriminals } from "./CriminalDataProvider.js";
 
+
 const contentElement = document.querySelector(".criminalsContainer")
 const eventHub = document.querySelector(".container")
 
@@ -24,8 +25,8 @@ eventHub.addEventListener('crimeSelected', event => {
                 return true
             } else if (event.detail.crimeId === "0") {
                 return true
-            }
-            return false
+            } else
+                return false
         })
 
         contentElement.innerHTML = ""
