@@ -1,16 +1,11 @@
 import Criminal from "./Criminal.js";
 import { useCriminals } from "./CriminalDataProvider.js";
+import initializeDetailButtonEvents from "../alibis/alibi.js";
+
 
 
 const contentElement = document.querySelector(".criminalsContainer")
 const eventHub = document.querySelector(".container")
-
-// let CriminalList = () => {
-//     const criminals = useCriminals()
-//     criminals.forEach(criminalObject => {
-//         contentElement.innerHTML += Criminal(criminalObject)
-//     });
-// }
 
 // Listen for the custom event you dispatched in ConvictionSelect
 eventHub.addEventListener('crimeSelected', event => {
@@ -33,6 +28,7 @@ eventHub.addEventListener('crimeSelected', event => {
 
         render(matchingCriminals)
 
+        initializeDetailButtonEvents()
 
         /*
             Then invoke render() and pass the filtered collection as
