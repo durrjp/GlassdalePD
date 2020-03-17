@@ -1,4 +1,5 @@
 import { saveNotes } from "./noteDataProvider.js"
+import { useCriminals } from "../criminals/CriminalDataProvider.js"
 
 const contentTarget = document.querySelector(".noteFormContainer")
 const eventHub = document.querySelector(".container")
@@ -19,15 +20,18 @@ eventHub.addEventListener("noteFormButtonClicked", customEvent => {
 contentTarget.addEventListener("click", clickEvent => {
     if (clickEvent.target.id === "saveNote") {
 
+        const criminalCollection = useCriminals()
         const noteText = document.querySelector("#noteText").value
         const criminalName = document.querySelector("#criminal").value
         const noteDate = document.querySelector("#date").value
+        const relatedCriminal = criminalCollection.find(criminal => criminal.id === note.criminalId)
 
         // Make a new object representation of a note
         const newNote = {
             noteText: noteText,
             criminal: criminalName,
-            timestamp: noteDate
+            timestamp: noteDate,
+            criminalid: relatedCriminal.id
         }
 
         // Change API state and application state

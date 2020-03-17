@@ -1,3 +1,5 @@
+import { useCriminals } from "../criminals/CriminalDataProvider"
+
 export const Note = noteObject => {
     return `
         <section class="note">
@@ -9,3 +11,5 @@ export const Note = noteObject => {
         </section>
     `
 }
+
+const criminals = useCriminals()
