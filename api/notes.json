@@ -1,28 +1,22 @@
 {
   "notes": [
     {
-      "noteText": "dfgdfgdf",
-      "date": "2020-03-11",
-      "suspect": "fgdfgd",
-      "id": 4
+      "noteText": "fsdfsd",
+      "criminal": "fsdfsd",
+      "timestamp": "2020-03-17",
+      "id": 8
     },
     {
-      "noteText": "sasdas",
-      "date": "2020-03-11",
-      "suspect": "Yo momma",
-      "id": 5
+      "noteText": "fsdfsd",
+      "criminal": "fsdfsd",
+      "timestamp": "2020-03-17",
+      "id": 9
     },
     {
-      "noteText": "guilty!",
-      "criminal": "Jon Durr",
-      "timestamp": 1584463189532,
-      "id": 6
-    },
-    {
-      "noteText": "test",
-      "criminal": "jon",
-      "timestamp": 1584463432853,
-      "id": 7
+      "noteText": "fsdfsd",
+      "criminal": "fsdfsd",
+      "timestamp": "2020-03-17",
+      "id": 10
     }
   ]
 }

@@ -21,12 +21,13 @@ contentTarget.addEventListener("click", clickEvent => {
 
         const noteText = document.querySelector("#noteText").value
         const criminalName = document.querySelector("#criminal").value
+        const noteDate = document.querySelector("#date").value
 
         // Make a new object representation of a note
         const newNote = {
             noteText: noteText,
             criminal: criminalName,
-            timestamp: Date.now()
+            timestamp: noteDate
         }
 
         // Change API state and application state

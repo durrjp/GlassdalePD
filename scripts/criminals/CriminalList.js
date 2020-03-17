@@ -36,7 +36,18 @@ eventHub.addEventListener('crimeSelected', event => {
         */
     }
 })
+let visibility = true
 
+eventHub.addEventListener("witnessesClicked", customEvent => {
+    visibility = !visibility
+
+    if (visibility) {
+        contentElement.classList.remove("invisible")
+    }
+    else {
+        contentElement.classList.add("invisible")
+    }
+})
 
 const render = criminalCollection => {
     criminalCollection.forEach(criminalObj => {

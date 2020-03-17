@@ -30,12 +30,6 @@ export const saveNotes = note => {
     .then(getNotes)
     .then(dispatchStateChangeEvent)
 }
-//event triggered = post new json object to the notes.json server 
-// eventHub.addEventListener("saveClicked", event => {
-//     const newNote = event.detail
-//     if ("noteText" in event.detail) {
-//     }
-//     saveNote(newNote)
-// })
+
 
 
