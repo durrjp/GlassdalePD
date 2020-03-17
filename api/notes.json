@@ -11,6 +11,18 @@
       "date": "2020-03-11",
       "suspect": "Yo momma",
       "id": 5
+    },
+    {
+      "noteText": "guilty!",
+      "criminal": "Jon Durr",
+      "timestamp": 1584463189532,
+      "id": 6
+    },
+    {
+      "noteText": "test",
+      "criminal": "jon",
+      "timestamp": 1584463432853,
+      "id": 7
     }
   ]
 }

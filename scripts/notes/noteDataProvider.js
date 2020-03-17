@@ -7,8 +7,11 @@ const dispatchStateChangeEvent = () => {
 }
 
 let notes = []
-const getNotes = () => {
-    fetch('http://localhost:8088/notes')
+
+export const useNotes = () => notes.slice()
+
+export const getNotes = () => {
+    return fetch('http://localhost:8088/notes')
         .then(response => response.json())
         .then(parsedNotes => {
             notes = parsedNotes
@@ -16,8 +19,8 @@ const getNotes = () => {
 
 }
 
-export const saveNote = note => {
-    fetch('http://localhost:8088/notes', {
+export const saveNotes = note => {
+    return fetch('http://localhost:8088/notes', {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
@@ -27,12 +30,12 @@ export const saveNote = note => {
     .then(getNotes)
     .then(dispatchStateChangeEvent)
 }
-eventHub.addEventListener("saveClicked", event => {
-    const newNote = event.detail
-    console.log(newNote)
-    if ("noteText" in event.detail) {
-    }
-    saveNote(newNote)
-})
+//event triggered = post new json object to the notes.json server 
+// eventHub.addEventListener("saveClicked", event => {
+//     const newNote = event.detail
+//     if ("noteText" in event.detail) {
+//     }
+//     saveNote(newNote)
+// })
 
 

@@ -1,37 +1,52 @@
+import { saveNotes } from "./noteDataProvider.js"
 
 const contentTarget = document.querySelector(".noteFormContainer")
 const eventHub = document.querySelector(".container")
 
+let visibility = false
+
+eventHub.addEventListener("noteFormButtonClicked", customEvent => {
+    visibility = !visibility
+
+    if (visibility) {
+        contentTarget.classList.remove("invisible")
+    }
+    else {
+        contentTarget.classList.add("invisible")
+    }
+})
+
+contentTarget.addEventListener("click", clickEvent => {
+    if (clickEvent.target.id === "saveNote") {
+
+        const noteText = document.querySelector("#noteText").value
+        const criminalName = document.querySelector("#criminal").value
+
+        // Make a new object representation of a note
+        const newNote = {
+            noteText: noteText,
+            criminal: criminalName,
+            timestamp: Date.now()
+        }
+
+        // Change API state and application state
+        saveNotes(newNote)
+    }
+})
 
 const render = () => {
+    contentTarget.classList.add("invisible")
     contentTarget.innerHTML = `
         <br>
         <form>
             <label>Date:</label><input type="date" id="date"><br>
-            <label>Suspect:</label><input type="text" id="suspect"><br>
-            <label>Notes:</label><textarea id="note-text"></textarea><br>
+            <label>Suspect:</label><input type="text" id="criminal"><br>
+            <label>Notes:</label><textarea id="noteText"></textarea><br>
         </form>
         <button id="saveNote">Save Note</button>
     `
 }
 
-// Handle browser-generated click event in component
-contentTarget.addEventListener("click", clickEvent => {
-    if (clickEvent.target.id === "saveNote") {
-        console.log(document.getElementById("note-text").value)
-        const saveClickEvent = new CustomEvent("saveClicked", {
-            detail: {
-                noteText: document.getElementById("note-text").value,
-                date: document.getElementById("date").value,
-                suspect: document.getElementById("suspect").value
-            }
-        // Make a new object representation of a note
-        })
-        // Change API state and application state
-        eventHub.dispatchEvent(saveClickEvent)
-    }
-
-})
 
 const NoteForm = () => {
     render()
