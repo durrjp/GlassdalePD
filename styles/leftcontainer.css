@@ -2,7 +2,6 @@
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
-    width: 70%;
     border: 1px solid red;
     margin: 2em;
 }
