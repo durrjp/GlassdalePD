@@ -1,5 +1,6 @@
 @import "./leftcontainer.css";
 @import "./rightcontainer.css";
+@import "./filters.css";
 
 .invisible {
     display: none !important
@@ -8,6 +9,16 @@
 .largeContainer {
     display: flex;
     flex-flow: row nowrap;
+}
+
+.pageHeader {
+    font-size: 3em;
+    text-align: center;
+    margin: 1em
+}
+
+.noteFormContainer {
+    text-align: center;
 }
 
 

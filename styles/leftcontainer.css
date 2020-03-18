@@ -1,10 +1,10 @@
 .leftContainer {
     display: flex;
     flex-flow: row nowrap;
-    justify-content: space-evenly;
+    justify-content: center;
     width: 70%;
     border: 1px solid red;
-    margin: 2em
+    margin: 2em;
 }
 
 .criminalsContainer {
