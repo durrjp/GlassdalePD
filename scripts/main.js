@@ -11,9 +11,10 @@ import "./witnesses/witnessList.js"
 import { DisplayWitnessButton } from "./witnesses/witnessButton.js";
 import { getWitnesses } from "./witnesses/witnessProvider.js";
 import { WitnessList } from "./witnesses/witnessList.js";
+import { NoteList } from "./notes/noteList.js";
 
 NoteForm()
-
+NoteList()
 getCriminals().then(CriminalList).then(initializeDetailButtonEvents)
 getConvictions().then(ConvictionSelect).then(initializeDetailButtonEvents)
 getWitnesses().then(WitnessList)

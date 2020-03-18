@@ -1,0 +1,19 @@
+.rightContainer {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    width: 20%;
+    margin: 2em
+}
+
+.note {
+    border: solid black 1px;
+    width: 10em;
+    height: 12em;
+    margin: 1em;
+    padding: .3em;
+}
+
+.notesContainer {
+    border: 1px solid blue;
+}

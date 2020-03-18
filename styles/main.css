@@ -1,47 +1,15 @@
-.criminalsContainer {
-    display: flex;
-    flex-flow: row wrap;
+@import "./leftcontainer.css";
+@import "./rightcontainer.css";
+
+.invisible {
+    display: none !important
 }
 
-.criminalsContainer__Criminal {
-    border: solid black 1px;
-    width: 10em;
-    height: 12em;
-    margin: 1em;
-    padding: .3em;
-}
-.criminalsContainer__Header {
-    font-size: 1.2em;
-    font-weight: bold;
-}
-
-.listsContainer {
+.largeContainer {
     display: flex;
     flex-flow: row nowrap;
 }
 
-.witnessContainer {
-    display: flex;
-    flex-flow: row wrap;
-}
 
-.invisible {
-    display: none
-}
 
-.witnessContainer__Witness {
-    border: solid black 1px;
-    width: 10em;
-    height: 12em;
-    margin: 1em;
-    padding: .3em;
-}
-.witnessContainer__Header {
-    font-size: 1.2em;
-    font-weight: bold;
-}
 
-.smallContainer {
-    display:flex;
-    flex-flow: column nowrap;
-}

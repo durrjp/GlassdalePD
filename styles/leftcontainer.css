@@ -1,0 +1,43 @@
+.leftContainer {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    width: 70%;
+    border: 1px solid red;
+    margin: 2em
+}
+
+.criminalsContainer {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.criminalsContainer__Criminal {
+    border: solid black 1px;
+    width: 10em;
+    height: 12em;
+    margin: 1em;
+    padding: .3em;
+}
+.criminalsContainer__Header {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.witnessContainer {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+.witnessContainer__Witness {
+    border: solid black 1px;
+    width: 10em;
+    height: 12em;
+    margin: 1em;
+    padding: .3em;
+}
+.witnessContainer__Header {
+    font-size: 1.2em;
+    font-weight: bold;
+}

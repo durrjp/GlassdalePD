@@ -20,18 +20,15 @@ eventHub.addEventListener("noteFormButtonClicked", customEvent => {
 contentTarget.addEventListener("click", clickEvent => {
     if (clickEvent.target.id === "saveNote") {
 
-        const criminalCollection = useCriminals()
         const noteText = document.querySelector("#noteText").value
-        const criminalName = document.querySelector("#criminal").value
         const noteDate = document.querySelector("#date").value
-        const relatedCriminal = criminalCollection.find(criminal => criminal.id === note.criminalId)
+        const criminalName = document.querySelector("#criminal").value
 
         // Make a new object representation of a note
         const newNote = {
             noteText: noteText,
             criminal: criminalName,
             timestamp: noteDate,
-            criminalid: relatedCriminal.id
         }
 
         // Change API state and application state
