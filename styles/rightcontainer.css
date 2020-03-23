@@ -11,8 +11,9 @@
     height: 12em;
     margin: 1em;
     padding: .3em;
+    background-color: rgb(145, 240, 145,.5);
+
 }
 
 .notesContainer {
-    border: 1px solid blue;
 }

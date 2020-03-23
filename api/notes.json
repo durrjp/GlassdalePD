@@ -1,32 +1,10 @@
 {
   "notes": [
     {
-      "noteText": "She looks suspicious",
-      "criminal": "Madelyn Lebsack",
-      "timestamp": "2020-03-02",
-      "id": 1,
-      "criminalId": 1
-    },
-    {
-      "noteText": "looks suspicious",
-      "criminal": "Ramiro Volkman",
-      "timestamp": "2020-03-12",
-      "id": 2,
-      "criminalId": 37
-    },
-    {
-      "noteText": "looks suspicious",
-      "criminal": "Jordane West",
-      "timestamp": "2020-03-06",
-      "id": 3,
-      "criminalId": 5
-    },
-    {
-      "noteText": "looks suspicious",
-      "criminal": "Loy Gibson",
-      "timestamp": "2020-03-05",
-      "id": 4,
-      "criminalId": 21
+      "noteText": "testing",
+      "criminalId": 4,
+      "timestamp": "2020-03-23",
+      "id": 1
     }
   ]
 }

@@ -6,12 +6,9 @@ const contentTarget = document.querySelector(".witnessContainer")
 const eventHub = document.querySelector(".container")
 
 
-eventHub.addEventListener("witnessesClicked", customEvent => {
-    render()
-})
 
 const render = () => {
-    contentTarget.classList.add("invisible")
+    // contentTarget.classList.add("invisible")
     getWitnesses().then(() => {
         const Witnesses = useWitnesses()
 
@@ -23,19 +20,13 @@ const render = () => {
     })
 }
 
-export const WitnessList = () => {
-    const Witnesses = useWitnesses()
-    render(Witnesses)
-
-}
-
 let visibility = false
-
 eventHub.addEventListener("witnessesClicked", customEvent => {
     visibility = !visibility
 
     if (visibility) {
         contentTarget.classList.remove("invisible")
+        render()
     }
     else {
         contentTarget.classList.add("invisible")

@@ -2,7 +2,6 @@
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
-    border: 1px solid red;
     margin: 2em;
 }
 
@@ -18,6 +17,7 @@
     height: 12em;
     margin: 1em;
     padding: .3em;
+    background-color: blanchedalmond;
 }
 .criminalsContainer__Header {
     font-size: 1.2em;
@@ -35,6 +35,8 @@
     height: 12em;
     margin: 1em;
     padding: .3em;
+    background-color: blanchedalmond;
+
 }
 .witnessContainer__Header {
     font-size: 1.2em;
