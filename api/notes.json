@@ -1,10 +1,22 @@
 {
   "notes": [
     {
-      "noteText": "testing",
-      "criminalId": 4,
-      "timestamp": "2020-03-23",
+      "noteText": "sdasda",
+      "criminalId": 3,
+      "timestamp": "2020-03-26",
       "id": 1
+    },
+    {
+      "noteText": "wsdas",
+      "criminalId": 7,
+      "timestamp": "2020-03-18",
+      "id": 2
+    },
+    {
+      "noteText": "He' did it!",
+      "criminalId": 42,
+      "timestamp": "",
+      "id": 3
     }
   ]
 }

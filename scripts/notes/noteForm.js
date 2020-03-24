@@ -22,14 +22,13 @@ contentTarget.addEventListener("click", clickEvent => {
 
         const noteText = document.querySelector("#noteText").value
         const noteDate = document.querySelector("#date").value
-        const criminalName = document.querySelector("#criminal").value
-        const criminals = useCriminals()
-        const foundCriminal = criminals.find(criminal => criminalName === criminal.name)
-        const foundCriminalId = foundCriminal.id
+        const CriminalId = document.querySelector("#criminalSelect").value
+        // const foundCriminal = criminals.find(criminal => criminalName === criminal.name)
+        // const foundCriminalId = foundCriminal.id
         // Make a new object representation of a note
         const newNote = {
             noteText: noteText,
-            criminalId: foundCriminalId,
+            criminalId: parseInt(CriminalId),
             timestamp: noteDate,
         }
         console.log(newNote)
@@ -40,13 +39,29 @@ contentTarget.addEventListener("click", clickEvent => {
 })
 
 const render = () => {
+    const allCriminals = useCriminals()
     contentTarget.classList.add("invisible")
     contentTarget.innerHTML = `
-        <br>
+        
         <form>
-            <label>Date:</label><input type="date" id="date"><br>
-            <label>Suspect:</label><input type="text" id="criminal"><br>
-            <label>Notes:</label><textarea id="noteText"></textarea><br>
+            <fieldset>
+                <label>Date:</label><input type="date" id="date"><br>
+            </fieldset>
+            <fieldset>
+                <label>Criminal:</label>
+                <select class="dropdown" id="criminalSelect">
+                    <option value="0">Please select a crime...</option>
+                    ${
+                        allCriminals.map(criminalObj => {
+                            return `<option value="${criminalObj.id}">${criminalObj.name}</option>`
+                            }
+                        )
+                    }
+                </select><br>
+            </fieldset>
+            <fieldset>
+                <label>Notes:</label><textarea id="noteText" cols="40" rows="4"></textarea><br>
+            </fieldset>
         </form>
         <button id="saveNote">Save Note</button>
     `

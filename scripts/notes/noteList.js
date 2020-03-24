@@ -7,14 +7,13 @@ const contentTarget = document.querySelector(".notesContainer")
 const eventHub = document.querySelector(".container")
 
 eventHub.addEventListener("noteStateChanged", customEvent => {
-    NoteList()
-    contentTarget.classList.remove("invisible")
+    render()
 })
 
 eventHub.addEventListener("allNotesClicked", event => {
-    NoteList()
+    render()
 })
-let visibility = true
+let visibility = false
 eventHub.addEventListener("allNotesClicked", customEvent => {
     visibility = !visibility
     if (visibility) {
@@ -26,14 +25,13 @@ eventHub.addEventListener("allNotesClicked", customEvent => {
 
 export const NoteList = () => {
     render()
-    contentTarget.classList.add("invisible")
 }
 
 const render = () => {
     getNotes().then(() => {
         const allTheNotes = useNotes()
         const criminalCollection = useCriminals()
-
+        console.log
         contentTarget.innerHTML = allTheNotes.map(note => {
             const relatedCriminal = criminalCollection.find(criminal => {
                 return criminal.id === note.criminalId

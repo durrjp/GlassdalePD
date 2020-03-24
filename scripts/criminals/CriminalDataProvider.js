@@ -13,4 +13,15 @@ export const getCriminals = () => {
             }
         )
 }
-export const useCriminals = () => criminals
+export const useCriminals = () => {
+    //sort by criminal by last name before copying
+    criminals.sort((currentThing, nextThing) => {
+        const [currFirstName, currLastName] = currentThing.name.split(" ")
+        const [nextFirstName, nextLastName] = nextThing.name.split(" ")
+
+        if (currFirstName < nextFirstName) {return -1}
+        if (currFirstName > nextFirstName) {return 1}
+        else {return 0}
+    })
+    return criminals.slice()
+}
